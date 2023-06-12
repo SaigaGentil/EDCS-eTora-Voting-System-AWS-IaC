@@ -1,0 +1,10 @@
+---
+id: Default settings
+company_abbreviation: msc-csn-wut
+company_name: Master of Science in Computer Science and Networks at Warsaw University of Technology
+company_url: https://helloskygroup.com
+environment: development
+log_level: debug
+namespace: msc-csn-wut-edcs-aws-a001
+region: eu-central-1
+vpc_name: eu-central-1-a001
