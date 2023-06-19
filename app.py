@@ -6,8 +6,11 @@ import aws_cdk as cdk
 from etora_aws_infrastructure.etora_aws_infrastructure_stack import EtoraAwsInfrastructureStack
 
 # Set account and region
+# TODO: Define the account ID
 env_eu_frankfurt = cdk.Environment(account='', region='eu-central-1')
 env = env_eu_frankfurt
+
+# TODO:Load the stacks
 
 app = cdk.App()
 EtoraAwsInfrastructureStack(app, "EtoraAwsInfrastructureStack",
