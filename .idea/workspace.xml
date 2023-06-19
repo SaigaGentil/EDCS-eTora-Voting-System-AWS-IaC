@@ -5,16 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dbff5db-205d-43c0-97e9-9eab0f3faa3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/etora_aws_infrastructure.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config_properties.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ec2/infrastructure.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/infrastructure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -49,7 +39,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/akame/OneDrive/New_Sierra/Axel/School_Work/WUT/S1/EDCS-Distributed_Computing_Systems/etora_aws_infrastructure",
+    "last_opened_file_path": "C:/Users/akame/OneDrive/New_Sierra/Axel/School_Work/WUT/S1/EDAMI-Data_Mining/Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +64,7 @@
       <updated>1686528545993</updated>
       <workItem from="1686528547466" duration="335000" />
       <workItem from="1686529150230" duration="664000" />
-      <workItem from="1686529934484" duration="4624000" />
+      <workItem from="1686529934484" duration="6052000" />
     </task>
     <servers />
   </component>
