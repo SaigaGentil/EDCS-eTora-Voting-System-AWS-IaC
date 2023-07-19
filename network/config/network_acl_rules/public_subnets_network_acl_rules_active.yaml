@@ -1,0 +1,92 @@
+---
+############################################################
+# Start: Ingress Traffic
+############################################################
+# Allow HTTP traffic from the internet to the public subnets.
+- id: public-http-in
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 100
+  cidr_block: 0.0.0.0/0
+  egress: false
+  port_range:
+    from: 80
+    to: 80
+
+# Allow HTTPS traffic from the internet to the public subnets.
+- id: public-https-in
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 110
+  cidr_block: 0.0.0.0/0
+  egress: false
+  port_range:
+    from: 443
+    to: 443
+# TODO: #33 Allow traffic from UAV telemetry (beats?) and medusa APM.
+# TODO: #34 Allow inbound traffic for MySQL database from specific source.
+# TODO: #35 Allow inbound traffic from internet hosts responding to requests.
+# Allow traffic returning from the internet, responding to requests originating from the VPC.
+# Configured ports are ephemeral ports.
+- id: public-return-traffic-in
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 120
+  cidr_block: 0.0.0.0/0
+  egress: false
+  port_range:
+    from: 1024
+    to: 65535
+############################################################
+# End: Ingress Traffic
+############################################################
+
+############################################################
+# Start: Egress Traffic
+############################################################
+# TODO: #36 Allow all the above traffic to go out of the public subnet to the private subnet.
+# Allow HTTP traffic from the public subnets to the internet.
+- id: public-http-out
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 100
+  cidr_block: 0.0.0.0/0
+  egress: true
+  port_range:
+    from: 80
+    to: 80
+
+# Allow HTTPS traffic from the public subnets to the internet.
+- id: public-https-out
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 110
+  cidr_block: 0.0.0.0/0
+  egress: true
+  port_range:
+    from: 443
+    to: 443
+# Allow traffic returning from the public subnet, responding to requests originating from the internet.
+# Configured ports are ephemeral ports.
+# TODO: #60 Is this rule required?
+- id: public-return-out
+  network_acl_id: null # No need to define. The network ACL ID is programmatically found with AWS CDK.
+  subnet: public
+  protocol: 6
+  rule_action: allow
+  rule_number: 120
+  cidr_block: 0.0.0.0/0
+  egress: true
+  port_range:
+    from: 1024
+    to: 65535
