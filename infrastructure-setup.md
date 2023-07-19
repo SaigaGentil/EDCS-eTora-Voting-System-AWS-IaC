@@ -24,3 +24,5 @@ yum upgrade
 ### Setup GlusterFS
 
 ### Configure FirewallD
+
+```bash```
