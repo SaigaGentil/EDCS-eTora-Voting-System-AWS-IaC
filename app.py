@@ -1,35 +1,38 @@
 #!/usr/bin/env python3
-import os
 
 import aws_cdk as cdk
 
-from etora_aws_infrastructure.etora_aws_infrastructure_stack import EtoraAwsInfrastructureStack
+from network.infrastructure import NetworkStack
+from route53_base.infrastructure import Route53BaseStack
+from ec2.infrastructure import Ec2Stack
 
 # Set account and region
 # TODO: Define the account ID
-env_eu_frankfurt = cdk.Environment(account='', region='eu-central-1')
+env_eu_frankfurt = cdk.Environment(account='192152878086', region='eu-central-1')
 env = env_eu_frankfurt
 
 # TODO:Load the stacks
 
 app = cdk.App()
-EtoraAwsInfrastructureStack(app, "EtoraAwsInfrastructureStack",
-                            # If you don't specify 'env', this stack will be environment-agnostic.
-                            # Account/Region-dependent features and context lookups will not work,
-                            # but a single synthesized template can be deployed anywhere.
 
-                            # Uncomment the next line to specialize this stack for the AWS Account
-                            # and Region that are implied by the current CLI configuration.
+# Define and run the route_53_base stack
+route_53_base_stack = Route53BaseStack(app,
+                                       "route-53-base-stack",
+                                       description="This stack deploys the base DNS infrastructure. It creates a hosted zone and an SSL/TLS wildcard certificate for the domain.",
+                                       env=env)
 
-                            # env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region=os.getenv(
-                            # 'CDK_DEFAULT_REGION')),
+# Define and run the network stack
+network_stack = NetworkStack(app,
+                             "network-stack",
+                             description="This stack deploys the network infrastructure. It creates a VPC, subnets, and a flow log.",
+                             env=env)
 
-                            # Uncomment the next line if you know exactly what Account and Region you
-                            # want to deploy the stack to. */
-
-                            # env=cdk.Environment(account='123456789012', region='us-east-1'),
-
-                            # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-                            )
+# Define and run the ec2 stack
+ec2_stack = Ec2Stack(app,
+                     "ec2-stack",
+                     description="This stack deploys the EC2 instances.",
+                     env=env,
+                     vpc=network_stack.vpc,
+                     )
 
 app.synth()
