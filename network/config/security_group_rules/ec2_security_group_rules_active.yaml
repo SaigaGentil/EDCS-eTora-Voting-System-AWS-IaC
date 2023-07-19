@@ -1,0 +1,23 @@
+# -----------------------------------------------------------------------------------------------------------
+# This file defines security group rules used by AWS CDK.
+# A security group acts as a firewall at the resource level, and defines what traffic is allowed in or out.
+# For more details on each field, refer to https://docs.aws.amazon.com/cdk/api/v2/python/aws_cdk.aws_ec2/CfnSecurityGroupIngress.html
+# -----------------------------------------------------------------------------------------------------------
+
+---
+# Allow SSH traffic from the internet to the EC2 Instances.
+- id: internet-ssh-in
+  description: This rule allows SSH traffic from the internet.
+  resource: internet_facing_alb_secg
+  traffic: ingress
+  ip_protocol: '6' # Refer to http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml.
+  cidr_ip: 0.0.0.0/0
+  cidr_ipv6: null
+  from_port: 22
+  to_port: 22
+  group_id: null # Programmatically found. If this is provided, don't provide the group_name.
+  group_name: null
+  source_prefix_list_id: null
+  source_security_group_id: null
+  source_security_group_name: null
+  source_security_group_owner_id: null

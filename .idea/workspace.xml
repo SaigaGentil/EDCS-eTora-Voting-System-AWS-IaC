@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dbff5db-205d-43c0-97e9-9eab0f3faa3f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cdk.context.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/config/security_group_rules/ec2_security_group_rules_active.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route53_base/infrastructure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ec2/infrastructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/ec2/infrastructure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure-setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure-setup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/infrastructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/infrastructure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,25 +34,29 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2R58LqH3TwumSn6f1QenvIjhHpH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/akame/OneDrive/New_Sierra/Axel/School_Work/WUT/S1/EDAMI-Data_Mining/Project",
+    "last_opened_file_path": "C:/Users/akame/OneDrive/New_Sierra/Axel/School_Work/WSG/Thesis_Work/Software/AWS/hs_infrastructure",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -54,6 +65,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\akame\OneDrive\New_Sierra\Axel\School_Work\WUT\S1\EDCS-Distributed_Computing_Systems\etora_aws_infrastructure\network\config\network_acl_rules" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,10 +81,27 @@
       <workItem from="1686528547466" duration="335000" />
       <workItem from="1686529150230" duration="664000" />
       <workItem from="1686529934484" duration="6052000" />
+      <workItem from="1689754831053" duration="2247000" />
+      <workItem from="1689758406566" duration="13350000" />
+      <workItem from="1689779633787" duration="2051000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
